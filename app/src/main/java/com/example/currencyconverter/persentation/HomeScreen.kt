@@ -3,8 +3,11 @@ package com.example.currencyconverter.persentation
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -18,7 +21,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 @Composable
 fun HomeScreen() {
 
-    Column {
+    Column(modifier =Modifier.verticalScroll(rememberScrollState())) {
 
         var isConvertClick by remember {
             mutableStateOf(true)
@@ -78,7 +81,10 @@ fun HomeScreen() {
             }
         }
 
-        Divider(modifier = Modifier.height(5.dp))
+        Divider(modifier = Modifier.height(1.dp))
+
+        Spacer(modifier = Modifier.height(10.dp))
+
         FavoriteScreen()
     }
 }
