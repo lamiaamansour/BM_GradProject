@@ -27,15 +27,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
 import com.example.currencyconverter.R
-import com.example.currencyconverter.ui.CurrencyViewModel
-
 
 data class CurrencyItem(val currencyCode: String, @DrawableRes val flagResId: Int)
 
 @Composable
 fun CurrencyDropdown(modifier: Modifier) {
+
     val currencies = listOf(
         CurrencyItem("USD", R.drawable.ic_united_states_of_america),
         CurrencyItem("EUR", R.drawable.ic_united_kingdom),
