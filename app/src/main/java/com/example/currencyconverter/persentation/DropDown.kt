@@ -1,4 +1,4 @@
-package com.example.mydropdown.ui
+package com.example.currencyconverter.persentation
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -27,7 +27,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
 import com.example.currencyconverter.R
+import com.example.currencyconverter.ui.CurrencyViewModel
+
 
 data class CurrencyItem(val currencyCode: String, @DrawableRes val flagResId: Int)
 
